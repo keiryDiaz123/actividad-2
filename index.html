@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web Profesional - Keiry Cáceres</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--accent-color);
+        }
+
+    
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background: var(--white);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: #fdfdfd;
+            border: 1px solid #e1e8ed;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: #ddd;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <nav>
+            <div class="logo">Keiry Cáceres</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#problemas">Problemas y Soluciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Desarrollo Profesional en Páginas Web</h2>
+            <p>Bienvenido a este sitio implementado como parte de la infraestructura de servidores y despliegue web en Windows Server utilizando IIS, Git y GitHub.</p>
+        </section>
+
+        <section id="informacion">
+            <h2>Información Básica del Tema</h2>
+            <p>El desarrollo web moderno requiere estructurar aplicaciones eficientes y seguras. Mediante el uso de tecnologías basadas en estándares abiertos como HTML5 y CSS3, es posible construir interfaces limpias, adaptables y de alto rendimiento que se integran perfectamente con servidores web empresariales como Internet Information Services (IIS).</p>
+            <p>La implementación continua a través de repositorios remotos simplifica la actualización y mantenimiento de los sistemas distribuidos.</p>
+        </section>
+
+        
+        <section id="problemas">
+            <h2>Problemas y Soluciones Frecuentes</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Problema 1: Conflictos de rutas en IIS</h3>
+                    <p>Al clonar repositorios, los archivos pueden quedar anidados en carpetas incorrectas impidiendo que el sitio cargue.</p>
+                    <p><strong>Solución:</strong> Asegurarse de utilizar el comando <code>git clone [URL] .</code> especificando el punto final para volcar el contenido directamente en la ruta raíz del directorio asignado.</p>
+                </div>
+                <div class="card">
+                    <h3>Problema 2: Permisos de acceso al servidor</h3>
+                    <p>Restricciones de lectura o escritura en directorios protegidos del sistema operativo.</p>
+                    <p><strong>Solución:</strong> Verificar la correcta asignación de roles y la pertenencia a las carpetas correspondientes dentro de <code>inetpub\wwwroot</code> bajo las directrices del administrador de red.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <p>Estudiante: Keiry Lissbeth Cáceres Díaz</p>
+        <p>Carrera: Ingeniería en Software - Universidad de Oriente (UNIVO)</p>
+        <p>&copy; 2026 - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
